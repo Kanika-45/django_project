@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {%for log in logs%}
+      <div>
+          <p>Date : {{log.date}}</p>
+          <h2><a href="% url 'post_detail' pk=log.pk">{{log.title}}</a></h2>
+      </div>
+    {%endfor%}
+    <p> <a href="{'% url 'log_new'}"> Add new post </a> </p>
+</body>
+</html>
